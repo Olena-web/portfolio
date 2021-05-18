@@ -11,3 +11,17 @@
     left: 0;
   }
 }
+@mixin inner_grid {
+  display: grid;
+  grid-template-columns: 24px 200px;
+  grid-template-rows: auto;
+  gap: 12px;
+  &__descripion {
+    grid-column-start: 2;
+    font-size: 12px;
+  }
+  &:before {
+    top: -15%;
+    left: -20px;
+  }
+}
