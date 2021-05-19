@@ -61,17 +61,25 @@
   }
   .container {
     display: grid;
-    grid-template-columns: 34fr 6.5fr 24fr 4.66fr 24fr;
-    grid-template-rows: 36px 60px 24px 123px 40px 136px 20px 136px 70px;
+    grid-template-columns: 30fr 6.5fr 20fr 1fr 20fr;
+    grid-template-rows: 6fr 10fr 4fr 20fr 7fr 22fr 20px 22fr 12fr;
     grid-auto-flow: row;
   }
   .row {
     display: block;
     width: 60px;
     height: 0;
-    border: 3px solid rgba(255, 165, 1, 1);
+    border: 3px solid $main-color;
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 3;
   }
+}
+.photo {
+  display: block;
+  background: url("../img/main_photo.jpg") no-repeat 50% / cover;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 10;
 }
