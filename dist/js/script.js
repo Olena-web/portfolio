@@ -7,3 +7,9 @@ hamburger.addEventListener("click", () => {
 closeElem.addEventListener("click", () => {
   menu.classList.remove("active");
 });
+const counters = document.querySelectorAll(".progress__item-text"),
+  lines = document.querySelectorAll(".progress__item-indicator");
+
+counters.forEach((item, i) => {
+  lines[i].style.width = item.innerHTML;
+});

@@ -18,9 +18,9 @@
     font-size: 36px;
   }
   &__wrapper {
-    padding: 60px 65px 0 65px;
+    padding-top: 60px;
     display: grid;
-    grid-template: repeat(4, minmax(270px, auto)) / repeat(
+    grid-template: repeat(2, minmax(270px, auto)) / repeat(
         4,
         minmax(270px, auto)
       );
@@ -46,6 +46,46 @@
     &-icon {
       margin-top: 30px;
       margin-left: 30px;
+    }
+  }
+  .progress__wrapper {
+    margin-top: 128px;
+    margin-bottom: 126px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(350px, auto));
+    row-gap: 38px;
+    column-gap: 45px;
+    span {
+      display: flex;
+      justify-content: space-between;
+    }
+    .progress__item-title {
+      position: relative;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      @include before_circle;
+      &:before {
+        top: -8px;
+        transform: translateX(-50%);
+      }
+    }
+    .progress__item-block {
+      position: absolute;
+      height: 14px;
+      width: 350px;
+      border-radius: 4px;
+      background: rgba(232, 228, 222, 1);
+      z-index: 2;
+    }
+    .progress__item-indicator {
+      position: relative;
+      height: 14px;
+      border-radius: 4px;
+      background: rgba(255, 165, 1, 1);
+      z-index: 10;
     }
   }
 }
