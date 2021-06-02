@@ -1,91 +1,71 @@
 .skills {
   padding-top: 120px;
-  &__title {
+}
+
+&__wrapper {
+  padding-top: 60px;
+  display: grid;
+  grid-template: repeat(2, minmax(270px, auto)) / repeat(4, minmax(270px, auto));
+  column-gap: 13px;
+  row-gap: 13px;
+  grid-auto-rows: minmax(270px, auto);
+}
+&__item {
+  display: grid;
+  grid-template-rows: 90px 160px;
+  background: rgba(196, 196, 196, 1);
+  border: 1px solid rgba(0, 0, 0, 1);
+
+  &-title {
+    margin-top: 20px;
+    padding-left: 30px;
+  }
+  &-body {
+    margin-top: 15px;
+    padding: 0 30px 0 30px;
+    font-size: 12px;
+  }
+  &-icon {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+.progress__wrapper {
+  margin-top: 128px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(350px, auto));
+  row-gap: 38px;
+  column-gap: 45px;
+  span {
+    display: flex;
+    justify-content: space-between;
+  }
+  .progress__item-title {
     position: relative;
-    text-align: center;
-    font-size: 16px;
+    text-align: left;
+    font-size: 14px;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 21px;
     @include before_circle;
     &:before {
-      top: -6px;
-      left: 50%;
+      top: -8px;
       transform: translateX(-50%);
     }
   }
-  &__subtitle {
-    text-align: center;
-    font-size: 36px;
+  .progress__item-block {
+    position: absolute;
+    height: 14px;
+    width: 350px;
+    border-radius: 4px;
+    background: rgba(232, 228, 222, 1);
+    z-index: 2;
   }
-  &__wrapper {
-    padding-top: 60px;
-    display: grid;
-    grid-template: repeat(2, minmax(270px, auto)) / repeat(
-        4,
-        minmax(270px, auto)
-      );
-    column-gap: 13px;
-    row-gap: 13px;
-    grid-auto-rows: minmax(270px, auto);
-  }
-  &__item {
-    display: grid;
-    grid-template-rows: 90px 160px;
-    background: rgba(196, 196, 196, 1);
-    border: 1px solid rgba(0, 0, 0, 1);
-
-    &-title {
-      margin-top: 20px;
-      padding-left: 30px;
-    }
-    &-body {
-      margin-top: 15px;
-      padding: 0 30px 0 30px;
-      font-size: 12px;
-    }
-    &-icon {
-      margin-top: 30px;
-      margin-left: 30px;
-    }
-  }
-  .progress__wrapper {
-    margin-top: 128px;
-    margin-bottom: 126px;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(350px, auto));
-    row-gap: 38px;
-    column-gap: 45px;
-    span {
-      display: flex;
-      justify-content: space-between;
-    }
-    .progress__item-title {
-      position: relative;
-      text-align: left;
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 21px;
-      @include before_circle;
-      &:before {
-        top: -8px;
-        transform: translateX(-50%);
-      }
-    }
-    .progress__item-block {
-      position: absolute;
-      height: 14px;
-      width: 350px;
-      border-radius: 4px;
-      background: rgba(232, 228, 222, 1);
-      z-index: 2;
-    }
-    .progress__item-indicator {
-      position: relative;
-      height: 14px;
-      border-radius: 4px;
-      background: rgba(255, 165, 1, 1);
-      z-index: 10;
-    }
+  .progress__item-indicator {
+    position: relative;
+    height: 14px;
+    border-radius: 4px;
+    background: rgba(255, 165, 1, 1);
+    z-index: 10;
   }
 }
