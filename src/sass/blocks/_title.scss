@@ -2,6 +2,22 @@
   font-weight: bold;
   font-size: 36px;
   line-height: 60px;
+  &__section-title {
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    @include before_circle;
+    &:before {
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__section-subtitle {
+    text-align: center;
+  }
   &__fz16 {
     font-size: 16px;
     line-height: 24px;
@@ -18,21 +34,5 @@
   }
   &__fz20 {
     font-size: 20px;
-  }
-  &__section-title {
-    position: relative;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    @include before_circle;
-    &:before {
-      top: -6px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-  &__section-subtitle {
-    text-align: center;
   }
 }
