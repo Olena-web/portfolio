@@ -2,13 +2,14 @@
   padding-top: 66px;
   &__wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 365px);
+    grid-template-columns: repeat(2, minmax(365px, auto));
     justify-content: space-between;
   }
   &__column {
     display: grid;
-    grid-template-rows: repeat(3, 44px);
+    grid-template-rows: repeat(3, minmax(44px, auto));
     row-gap: 15px;
+    grid-auto-rows: minmax(44px, auto);
   }
   span {
     display: flex;
