@@ -257,7 +257,24 @@
       <div class="container">
         <div class="about__wrapper">
           <div class="about__photo">
-            <img src="img/main_photo.jpg" alt="photo" />
+            <!-- <img
+              srcset="img/main_photo_mini.jpg 300w, img/main_photo.jpg 400w"
+              sizes="(max-width:576px) 280px,
+                      (min-width:577px) 400px"
+              src="img/main_photo.jpg"
+              alt="photo"
+            />это не всегда срабатывает -->
+            <picture>
+              <source type="image/webp" srcset="img/main_photo.webp" />
+              <source
+                media="(max-width: 576px)"
+                srcset="img/main_photo_mini.jpg"
+              />
+              <source media="(min-width: 577px)" srcset="img/main_photo.jpg" />
+              <img src="img/main_photo.jpg" alt="photo" />
+              <!-- <source type="image/webp" srcset="img/main_photo.webp" />
+              <img src="img/main_photo.jpg" alt="photo" />google hrome works, opera don't works webp -->
+            </picture>
           </div>
           <div class="about__descr">
             <h2 class="title title__fz16 about__title">Про меня</h2>
