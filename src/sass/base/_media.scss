@@ -41,7 +41,20 @@
       grid-template-columns: repeat(2, minmax(350px, auto));
     }
   }
+  .portfolio {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-template-rows: repeat(2, 200px);
+      grid-gap: 1rem;
+      grid-auto-flow: dense;
+    }
+  }
+  .contacts__wrapper {
+    column-gap: 12px;
+    padding: 0 29px 0 5px;
+  }
 }
+
 @media (max-width: 992px) {
   .container {
     max-width: 720px;
@@ -73,16 +86,38 @@
   }
   .skills {
     &__wrapper {
-      grid-template: repeat(2, minmax(270px, auto)) / repeat(
+      grid-template: repeat(2, minmax(260px, auto)) / repeat(
           2,
-          minmax(270px, auto)
+          minmax(260px, auto)
         );
+    }
+  }
+  .price {
+    &__wrapper {
+      grid-template-columns: repeat(2, minmax(340px, auto));
+    }
+  }
+  .contacts {
+    &__wrapper {
+      grid-template-columns: 251px 413px;
+      column-gap: 10px;
+    }
+    &__form {
+      grid-template: 49px 190px 45px / repeat(2, 205px);
+    }
+    &__btn {
+      padding: 0px 16px;
     }
   }
 }
 @media (max-width: 768px) {
   .container {
     max-width: 540px;
+  }
+  .promo {
+    &__title {
+      width: 452px;
+    }
   }
   .about {
     padding-top: 40px;
@@ -110,8 +145,32 @@
       grid-template-columns: minmax(350px, auto);
     }
   }
+  .portfolio {
+    &__wrapper {
+      .horizontal {
+        grid-row: 2;
+        grid-column: 2;
+      }
+      .vertical {
+        grid-row: 1;
+        grid-column: 3;
+      }
+    }
+  }
+  .price {
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+  .contacts {
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+    &__form {
+      grid-template-columns: 190px 262px;
+    }
+  }
 }
-
 @media (max-width: 576px) {
   .container {
     max-width: 340px;
@@ -177,6 +236,31 @@
         left: 13px;
         margin-bottom: 21px;
       }
+    }
+  }
+  .portfolio {
+    &__wrapper {
+      grid-template-rows: repeat(6, 200px);
+      .horizontal {
+        grid-row: 1;
+        grid-column: 1;
+      }
+      .vertical {
+        grid-row: 6;
+        grid-column: 1;
+      }
+    }
+  }
+  .contacts {
+    &__form {
+      grid-template-columns: 1fr;
+    }
+    &__triggers {
+      grid-template-columns: 1fr;
+    }
+    &__input input {
+      font-size: 9px;
+      padding: 0 8px;
     }
   }
 }
