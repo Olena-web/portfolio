@@ -44,7 +44,7 @@
   .portfolio {
     &__wrapper {
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      grid-template-rows: repeat(2, 200px);
+      grid-template-rows: repeat(2, 160px);
       grid-gap: 1rem;
       grid-auto-flow: dense;
     }
@@ -163,11 +163,15 @@
     }
   }
   .contacts {
+    padding: 70px 0 87px 0;
     &__wrapper {
       grid-template-columns: 1fr;
     }
     &__form {
-      grid-template-columns: 190px 262px;
+      grid-template-columns: 150px 160px;
+    }
+    &__photo {
+      display: none;
     }
   }
 }
@@ -241,26 +245,23 @@
   .portfolio {
     &__wrapper {
       grid-template-rows: repeat(6, 200px);
-      .horizontal {
-        grid-row: 1;
-        grid-column: 1;
-      }
+      .horizontal,
       .vertical {
-        grid-row: 6;
-        grid-column: 1;
+        grid-row: unset;
+        grid-column: unset;
       }
     }
-  }
-  .contacts {
-    &__form {
-      grid-template-columns: 1fr;
-    }
-    &__triggers {
-      grid-template-columns: 1fr;
-    }
-    &__input input {
-      font-size: 9px;
-      padding: 0 8px;
+    .contacts {
+      &__form {
+        grid-template-columns: 1fr;
+      }
+      &__triggers {
+        grid-template-columns: 1fr;
+      }
+      &__input input {
+        font-size: 9px;
+        padding: 0 8px;
+      }
     }
   }
 }
